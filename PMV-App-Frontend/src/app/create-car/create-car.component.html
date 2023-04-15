@@ -1,0 +1,72 @@
+<main>
+  <div class="container">
+    <h2>Create Car</h2>
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group mb-3">
+        <label for="plateNo">Plate No:</label>
+        <div class="col-6 px-0">
+          <input type="text" class="form-control" id="plateNo" [(ngModel)]="car.plateNo" placeholder="Enter plate no"
+            name="plateNo" />
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="carModel">Car Model:</label>
+        <div class="col-6 px-0">
+          <input type="text" class="form-control" id="carModel" [(ngModel)]="car.carModel" placeholder="Enter car model"
+            name="carModel" />
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="manufacturingYear">Manufacturing Year:</label>
+        <div class="col-6 px-0">
+          <input type="number" class="form-control" id="manufacturingYear" [(ngModel)]="car.manufacturingYear"
+            placeholder="Enter manufacturing year" name="manufacturingYear" />
+        </div>
+      </div>
+      <div class="form-group mb-3">
+        <label for="upcomingServiceDate">Upcoming Service Date:</label>
+        <div class="col-6 px-0">
+          <input type="date" class="form-control" id="upcomingServiceDate" [(ngModel)]="car.upcomingServiceDate"
+            placeholder="Enter upcoming service date" name="upcomingServiceDate" />
+        </div>
+      </div>
+
+      <fieldset class="col-6 px-1 border p-2">
+        <legend class="w-auto">Driver:</legend>
+        <div class="form-group">
+          <label for="street">Id:</label>
+          <div class="col-6 px-0">
+            <input type="text" class="form-control" [(ngModel)]="car.driver.driverId" id="driverId" name="driverId" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="city">FirstName:</label>
+          <div class="col-6 px-0">
+            <input type="text" class="form-control" [(ngModel)]="car.driver.firstName" id="firstName"
+              name="firstName" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="state">LastName:</label>
+          <div class="col-6 px-0">
+            <input type="text" class="form-control" [(ngModel)]="car.driver.lastName" id="lastName" name="lastName" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="zip">Email:</label>
+          <div class="col-6 px-0">
+            <input type="text" class="form-control" [(ngModel)]="car.driver.email" id="email" name="email" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="zip">Phone:</label>
+          <div class="col-6 px-0">
+            <input type="text" class="form-control" [(ngModel)]="car.driver.phoneNumber" id="phoneNumber" name="phoneNumber" />
+          </div>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-secondary" style="margin-top: 15px;">Submit</button>
+      <button class="btn btn-secondary" style="margin-left: 30%; margin-top: 15px;" (click)="goToAllCars()">Get Cars List</button>
+    </form>
+  </div>
+</main>

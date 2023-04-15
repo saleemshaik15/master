@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="place-content: space-between;">
+  <div><a class="navbar-brand">PMV Administrator Page</a></div>
+  <ul class="navbar-nav">
+    <li><a routerLink="/logout" class="nav-link">Log Out</a></li>
+  </ul>
+</nav>
+
+<br>
+
+<section>
+  <mat-card-title>All Vehicle Details</mat-card-title>
+  <br>
+  <div fxLayoutAlign="center center" class="box">
+    <mat-card class="card">
+      <table class="table" style="text-align: center;">
+        <thead>
+          <tr>
+            <th>Plate No.</th>
+            <th>Car Model</th>
+            <th>Manufacturing Year</th>
+            <th>Upcoming Service Date</th>
+            <th>Driver Id</th>
+            <!-- <th>Service Tickets</th> -->
+            <th>Service Done?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let car of cars">
+            <td>{{car.plateNo}}</td>
+            <td>{{car.carModel}}</td>
+            <td>{{car.manufacturingYear}}</td>
+            <td>{{car.upcomingServiceDate}}</td>
+            <td>{{car.driver.driverId}}</td>
+            <!-- <td>
+              <ul>
+                <li *ngFor="let serviceTicket of car.serviceTickets">
+                  {{serviceTicket.serviceTicketId}}
+                </li>
+              </ul>
+            </td> -->
+            <td>{{car.isServiceDone}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-secondary" style="margin-top: 15px;" (click)="goToAddCarForm()">Back</button>
+    </mat-card>
+  </div>
+</section>

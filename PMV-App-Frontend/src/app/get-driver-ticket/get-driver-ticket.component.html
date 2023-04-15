@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="place-content: space-between;">
+  <div><a class="navbar-brand">PMV Driver Page</a></div>
+  <ul class="navbar-nav">
+    <li><a routerLink="/logout" class="nav-link">Log Out</a></li>
+  </ul>
+</nav>
+
+<br>
+
+<section>
+  <mat-card-title>Driver Ticket Details</mat-card-title>
+  <br>
+  <div fxLayoutAlign="center center" class="box">
+    <mat-card class="card">
+      <table class="table" style="text-align: center;">
+        <thead>
+          <tr>
+            <th>Service Ticket ID</th>
+            <th>Plate Number</th>
+            <th>Last Service Mileage</th>
+            <th>Last Service Date</th>
+            <th>Service Description</th>
+            <th>Service Cost</th>
+            <th>Upcoming Service Date</th>
+            <th>Engineer Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let serviceTicket of serviceTickets">
+            <td>{{ serviceTicket.serviceTicketId }}</td>
+            <td>{{ serviceTicket.car.plateNo }}</td>
+            <td>{{ serviceTicket.lastServiceMileage }}</td>
+            <td>{{ serviceTicket.lastServiceDate }}</td>
+            <td>{{ serviceTicket.serviceDescription }}</td>
+            <td>{{ serviceTicket.serviceCost }}</td>
+            <td>{{ serviceTicket.upcomingServiceDate }}</td>
+            <td>{{ serviceTicket.engineerName }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </mat-card>
+  </div>
+</section>

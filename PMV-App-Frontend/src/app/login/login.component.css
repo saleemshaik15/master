@@ -1,0 +1,57 @@
+.main.div {
+    padding: 0px;
+    place-content: center;
+    flex-direction: row;
+    display: flex;
+}
+
+.box {
+    place-content: center;
+    flex-direction: row;
+    display: flex;
+    height: 100%;
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+}
+
+.card {
+    flex: 1 1 100%;
+    max-width: 30%;
+    padding: 20px;
+    box-sizing:border-box;
+}
+
+.field-one {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    box-sizing: border-box;
+    place-content: stretch flex-start;
+}
+
+.field-two {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    box-sizing: border-box;
+    place-content: stretch flex-start;
+}
+
+.btn {
+    margin-left: 40%;
+    color: #fff;
+    background-color: #3f51b5;
+}
+
+mat-card {
+    border-style: double;
+    border-color: #3f51b5;
+}
+
+mat-card-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    margin-bottom: 0%;
+    color: #3f51b5;
+}

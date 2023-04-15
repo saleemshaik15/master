@@ -1,0 +1,19 @@
+<section>
+  <mat-card-title fxLayoutAlign="center center" style="place-content: center; display: flex;">PMV System Login</mat-card-title>
+  <br>
+  <div fxLayoutAlign="center center" class="box">
+    <mat-card class="card">
+      <form>
+        <mat-form-field fxLayoutAlign="stretch" fxLayout="column" floatLabel="always" appearance="outline" color="primary" class="field-one">
+          <mat-label><mat-icon>account_box</mat-icon></mat-label>
+          <input matInput placeholder="Username" type="text" id="username" name="username" [(ngModel)]="userCred.userName" required>
+        </mat-form-field>
+        <mat-form-field fxLayoutAlign="stretch" fxLayout="column" floatLabel="always" appearance="outline" color="primary" class="field-two">
+          <mat-label><mat-icon>lock</mat-icon></mat-label>
+          <input matInput placeholder="Password" type="password" id="password" name="password" [(ngModel)]="userCred.password" required>
+        </mat-form-field>
+        <button mat-raised-button class="btn" (click)="login()" color="primary">Login</button>
+      </form>
+    </mat-card>
+  </div>
+</section>
